@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de control Usuarios</title>
+  <title>Listado de usuarios registrados</title>
   
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -44,7 +44,7 @@
             Usuarios
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="crear_usuario.jsp">Crear Usuario</a></li>
+            <li><a class="dropdown-item" href="crear_usuario.jsp">Crear Usuario</a></li>
             <li><a class="dropdown-item" href="listar_usuarios.jsp">Listar Usuarios</a></li>
           </ul>
         </li>
@@ -61,26 +61,20 @@
 </nav>
 
   <div class="container col-lg-8 my-4">
-		<h1>Resumen de Registro de Capacitacion</h1>
+		<h1>Resumen de Registro de usuarios</h1>
 
 		<div class="card">
 			<div class="card-body">
-				<h5 class="card-title">Capacitacion Creada</h5>
+				<h5 class="card-title">Usuario Creado</h5>
 				<p class="card-text">
-					<strong>Rut:</strong>
-					<%=request.getParameter("rut")%></p>
+					<strong>Run:</strong>
+					<%=request.getParameter("run")%></p>
 				<p class="card-text">
-					<strong>Dia de la Capacitacion:</strong>
-					<%=request.getParameter("dia")%></p>
+					<strong>Nombre:</strong>
+					<%=request.getParameter("nombre")%></p>
 				<p class="card-text">
-					<strong>Hora de la Capacitacion:</strong>
-					<%=request.getParameter("hora")%></p>
-				<p class="card-text">
-					<strong>Lugar de la Capacitacion:</strong>
-					<%=request.getParameter("lugar")%></p>
-				<p class="card-text">
-					<strong>Cantidad de Asistentes:</strong>
-					<%=request.getParameter("cantidad")%></p>
+					<strong>Fecha Nacimiento:</strong>
+					<%=request.getParameter("fechaNacimiento")%></p>
 			</div>
 		</div>
 		

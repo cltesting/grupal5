@@ -10,13 +10,13 @@ import java.io.IOException;
 /**
  * Servlet implementation class ListadoUsuarios
  */
-public class ListadoUsuarios extends HttpServlet {
+public class ListarUsuarios extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListadoUsuarios() {
+    public ListarUsuarios() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,6 +35,19 @@ public class ListadoUsuarios extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		String rut = request.getParameter("rut");
+		String dia = request.getParameter("dia");
+		String hora = request.getParameter("hora");
+		String lugar =request.getParameter("lugar");
+		String cantidad = request.getParameter("cantidad");
+		
+		request.setAttribute("rut", rut);
+		request.setAttribute("dia", dia);
+		request.setAttribute("hora", hora);
+		request.setAttribute("lugar", lugar);
+		request.setAttribute("cantidad", cantidad);
+		request.getRequestDispatcher("listar_capacitaciones.jsp").forward(request, response);
 	}
 
 }

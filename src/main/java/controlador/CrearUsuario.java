@@ -35,6 +35,16 @@ public class CrearUsuario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		String run = request.getParameter("run");
+		String nombre = request.getParameter("nombre");
+		String fechaNacimiento = request.getParameter("fechaNacimiento");
+		
+		request.setAttribute("run", run);
+		request.setAttribute("nombre", nombre);
+		request.setAttribute("fechaNacimiento", fechaNacimiento);
+		
+		request.getRequestDispatcher("listar_usuarios.jsp").forward(request, response);
 	}
 
 }
